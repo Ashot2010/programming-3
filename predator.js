@@ -1,4 +1,6 @@
-class Predator {
+let random = require("./random")
+
+module.exports=class Predator {
     constructor(x, y, index) {
         this.x = x;
         this.y = y;

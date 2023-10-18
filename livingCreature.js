@@ -1,10 +1,9 @@
-class LivingCreature {
+module.exports = class LivingCreature {
     constructor(x, y, index) {
         this.x = x;
         this.y = y;
         this.index = index;
         this.directions = [];
-
     }
 
     chooseCell(character) {
@@ -21,17 +20,4 @@ class LivingCreature {
         }
         return found;
     }
-
-    mul() {
-        this.multiply++;
-        var newCell = random(this.chooseCell(0));
-
-        if (this.multiply >= 8 && newCell) {
-            var newGrass = new Grass(newCell[0], newCell[1], this.index);
-            grassArr.push(newGrass);
-            matrix[newCell[1]][newCell[0]] = 1;
-            this.multiply = 0;
-        }
-    }
-    
 } 

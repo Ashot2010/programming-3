@@ -1,4 +1,6 @@
-class Water {
+let random = require("./random")
+
+module.exports=class Water {
     constructor(x, y, index) {
         this.x = x;
         this.y = y;
@@ -31,7 +33,6 @@ class Water {
         }
         return found;
     }
-
 
     move() {
         this.energy--
